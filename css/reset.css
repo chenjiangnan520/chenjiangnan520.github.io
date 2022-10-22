@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration:none
+}
+.w {
+    width: 990px;
+    margin: 0 auto;
+    font-size: 12px;
+    /* height: 140px; */
+    position: relative;
+}
+ul {
+    list-style: none;
+}
+body{
+    font-weight: 400;
+    background-color: #f4f4f4;
+}
