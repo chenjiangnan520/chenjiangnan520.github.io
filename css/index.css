@@ -492,21 +492,123 @@
     background-color: #fff;
     width: 190px;
     height: 130px;
+    /* margin-left: 20px; */
   }
   .nwes{
     overflow: hidden;
-    height: 130px;
     background-color: #fff;
 
   }
-  .nwes .news_tit{
+  .news_hd{
+    position: relative;
+  }
+  .news_hd .news_tit{
     height: 20px;
     padding: 10px;
     position: relative;
     line-height: 20px;
-    font-size: 0;
-    margin-bottom: 8px;
+    font-size: 14px;
+    /* margin-bottom: 8px; */
+    color: #000;
+    margin-left: 15px;
   }
- 
-
- 
+  .news_hd .news_more{
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 12px;
+    color: #999;
+    display: flex;
+    line-height: 20px;
+  }
+  .news_list{
+    position: relative;
+    margin: 0 15px;
+    height: 88px;
+  }
+  .news_list li {
+    max-width: 160px;
+    height: 16px;
+    line-height: 16px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    
+    margin-bottom: 6px;
+    font-size: 12px;
+  }
+  .news_list li a{
+    color: #999;
+  }
+  .news_list li a:hover{
+    color: #e1251b;
+  }
+  .news_list li a span{
+    display:inline-block;
+    position: relative;
+    height: 16px;
+    width: 35px;
+    line-height: 16px;
+    text-align: center;
+    vertical-align: 0;
+    color: #e1251b;
+    background-color: rgba(225,37,27,.08);
+    margin-right: 6px;
+  }
+  .service_entry{
+    overflow: hidden;
+    position: relative;
+    height: 238px;
+    padding: 5px .5px;
+    background-color: #fff;
+  }
+  .service_list{
+    padding-top: 5px;
+    height: 225px;
+    
+  }
+  .service_item{
+    position: relative;
+    float: left;
+    width: 63px;
+    height: 55px;
+    background-color: #fff;
+    overflow: hidden;
+    text-align: center;
+  }
+  .service_item .service_ico{
+    display: block;
+    position: relative;
+    color: #666;
+    margin: auto;
+    
+  }
+  .service_item .service_ico span{
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    width: 38px;
+    /* border-bottom: 2px solid #fff; */
+    color: #333;
+    margin: auto;
+  }
+  
+  .service_item .service_ico .service_ico_img{
+    display: block;
+    position: relative;
+    width: 28px;
+    height: 28px;
+    margin: auto;
+  }
+  .service_item .service_ico .service_ico_img_hover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    margin: auto;
+  }

@@ -116,6 +116,20 @@
           if(k <= 0) k = 2
           Minigraph[k].classList.add("imgActive")
         }
+        let service_ico_img = document.querySelectorAll(".service_item .service_ico .service_ico_img")
+        let service_ico_img_hover = document.querySelectorAll(".service_item .service_ico .service_ico_img_hover")
+        let service_list = document.querySelector(".service_list")
+        let service_item = document.querySelectorAll(".service_item")
+        service_list.onmouseover = function(evt){
+            // console.log(service_item)
+            for(let i = 0; i < service_ico_img.length;i++){
+              console.log(service_ico_img[i])
+              console.log(i)
+            }
+            // if(evt.target.nodeName==="DIV"){
+            //   console.log(service_item)
+            // }
+        }
       
       
       
