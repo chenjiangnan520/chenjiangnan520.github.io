@@ -118,20 +118,24 @@
         }
         let service_ico_img = document.querySelectorAll(".service_item .service_ico .service_ico_img")
         let service_ico_img_hover = document.querySelectorAll(".service_item .service_ico .service_ico_img_hover")
-        let service_list = document.querySelector(".service_list")
-        let service_item = document.querySelectorAll(".service_item")
-        service_list.onmouseover = function(evt){
-            // console.log(service_item)
-            for(let i = 0; i < service_ico_img.length;i++){
-              console.log(service_ico_img[i])
-              console.log(i)
+        let service_item = document.querySelectorAll(".service_list .service_item")
+        let spans = document.querySelectorAll(".service_item .service_ico span")
+        changeIcon()
+        function changeIcon() {
+          for(let i = 0; i < service_item.length;i++){
+            service_item[i].onmouseover = function (){
+              service_ico_img_hover[i].style.visibility = "visible"
+              service_ico_img_hover[i].style.opacity = 1
+              spans[i].style.color = "#c81623"
             }
-            // if(evt.target.nodeName==="DIV"){
-            //   console.log(service_item)
-            // }
+            service_item[i].onmouseout = function (){
+              service_ico_img_hover[i].style.visibility = "hidden"
+              service_ico_img_hover[i].style.opacity = 0
+              spans[i].style.color = "#666"
+            }
+
+          }
         }
-      
-      
       
       
 

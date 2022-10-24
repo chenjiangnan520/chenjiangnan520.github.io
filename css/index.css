@@ -122,6 +122,9 @@
     background-color: #e1251b;
     cursor: pointer;  /*小手 */
 }
+.form button:hover {
+  background-color: #c81623;
+}
 .shelper{
     position: absolute;
     left: 0px;
@@ -405,8 +408,8 @@
     width: 190px;
     height: 470px;
     float: right;
-    background-color: blanchedalmond;
     z-index: 1;
+  
     
   }
   .user{
@@ -473,6 +476,13 @@
     color: #fff;
     border-radius: 13px;
     background-color: #e1251b;
+  }
+  .user_profit .welfare:hover{
+    background-color: #c81623;
+  }
+  .user_profit .plus:hover{
+    background-color: #c81623;
+    color: #fff;
   }
   .plus{
     background-color: #363634;
@@ -558,7 +568,7 @@
   .service_entry{
     overflow: hidden;
     position: relative;
-    height: 238px;
+    height: 220px;
     padding: 5px .5px;
     background-color: #fff;
   }
@@ -575,6 +585,12 @@
     background-color: #fff;
     overflow: hidden;
     text-align: center;
+  }
+  .service_item .ico_img{
+    height: 28px;
+    position: relative;
+    width: 28px;
+    margin: 0 auto;
   }
   .service_item .service_ico{
     display: block;
@@ -601,6 +617,7 @@
     height: 28px;
     margin: auto;
   }
+
   .service_item .service_ico .service_ico_img_hover{
     position: absolute;
     top: 0;
@@ -609,6 +626,14 @@
     height: 28px;
     visibility: hidden;
     opacity: 0;
-    display: none;
-    margin: auto;
+    margin: 0 auto;
+  }
+  .service_entry::after{
+    position: absolute;
+    height: 1px;
+    left: 15px;
+    right: 15px;
+    background: linear-gradient(270deg,white,#eeeeee,#eeeeee,white);
+    top: 0;
+    content: " ";
   }
