@@ -8,22 +8,27 @@
                     `
           }).join("")
         }
-        
+        let tiems =null
         keyword.oninput = function (evt) {
-          if (evt.target.value == "") {
-            shelper.innerHTML = ""
-            return
-          }
-        
-          shelper.style.display = "block"
-          //动态创建script标签
-          let scriptA = document.createElement("script")
-          scriptA.src = `https://www.baidu.com/sugrec?pre=1&p=3&ie=utf-8&json=1&prod=pc&from=pc_web&sugsid=36560,37584,37140,36885,36786,37537,37498,26350,37446,37467&wd=${evt.target.value}&req=2&csor=6&pwd=11jdsal&cb=text&_=1666078688508`
-          document.body.appendChild(scriptA)
-        
-          scriptA.onload = function () {
-            scriptA.remove()
-          }
+          if(tiems) clearTimeout(tiems)
+        tiems = setTimeout(() => {
+            if (evt.target.value == "") {
+              shelper.innerHTML = ""
+              return
+            }
+            shelper.style.display = "block"
+            //动态创建script标签
+            let scriptA = document.createElement("script")
+            scriptA.src = `https://www.baidu.com/sugrec?pre=1&p=3&ie=utf-8&json=1&prod=pc&from=pc_web&sugsid=36560,37584,37140,36885,36786,37537,37498,26350,37446,37467&wd=${evt.target.value}&req=2&csor=6&pwd=11jdsal&cb=text&_=1666078688508`
+            document.body.appendChild(scriptA)
+          //查询结束删除创建的script标签
+            scriptA.onload = function () {
+              scriptA.remove()
+              console.log(1)
+            }
+            
+          }, 500);
+          
         }
         keyword.onblur = function () {
           shelper.style.display = "none"

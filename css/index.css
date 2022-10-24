@@ -637,3 +637,35 @@
     top: 0;
     content: " ";
   }
+  .content{
+    position: relative;
+  }
+  .seckill{
+    height: 260px;
+    margin: 30px 0 20px 0;
+    background-color: bisque;
+  }
+  .spec{
+    height: 260px;
+    margin-bottom: 20px;
+    background-color: yellow;
+  }
+  .channels{
+    height: 845px;
+    margin-bottom: 20px;
+    background-color: violet;
+  }
+  .feeds{
+     height: 1000px;
+     background-color: springgreen;
+  }
+  
+  .elevator{
+    position: absolute;
+    width: 58px;
+    height: 252px;
+    background-color: skyblue;
+    top: 0;
+    left: 50px;
+    margin-left: 615px;
+  }
