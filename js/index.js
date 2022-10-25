@@ -121,27 +121,91 @@
           if(k <= 0) k = 2
           Minigraph[k].classList.add("imgActive")
         }
-        let service_ico_img = document.querySelectorAll(".service_item .service_ico .service_ico_img")
-        let service_ico_img_hover = document.querySelectorAll(".service_item .service_ico .service_ico_img_hover")
-        let service_item = document.querySelectorAll(".service_list .service_item")
-        let spans = document.querySelectorAll(".service_item .service_ico span")
-        changeIcon()
-        function changeIcon() {
-          for(let i = 0; i < service_item.length;i++){
-            service_item[i].onmouseover = function (){
-              service_ico_img_hover[i].style.visibility = "visible"
-              service_ico_img_hover[i].style.opacity = 1
-              spans[i].style.color = "#c81623"
+        // 小图标滑动样式
+        SlideStyle()
+        function SlideStyle(){
+          let service_ico_img_hover = document.querySelectorAll(".service_item .service_ico .service_ico_img_hover")
+          let service_item = document.querySelectorAll(".service_list .service_item")
+          let spans = document.querySelectorAll(".service_item .service_ico span")
+          changeIcon()
+          function changeIcon() {
+            for(let i = 0; i < service_item.length;i++){
+              service_item[i].onmouseover = function (){
+                service_ico_img_hover[i].style.visibility = "visible"
+                service_ico_img_hover[i].style.opacity = 1
+                spans[i].style.color = "#c81623"
+              }
+              service_item[i].onmouseout = function (){
+                service_ico_img_hover[i].style.visibility = "hidden"
+                service_ico_img_hover[i].style.opacity = 0
+                spans[i].style.color = "#666"
+              }
+  
             }
-            service_item[i].onmouseout = function (){
-              service_ico_img_hover[i].style.visibility = "hidden"
-              service_ico_img_hover[i].style.opacity = 0
-              spans[i].style.color = "#666"
+          }
+        
+        }
+        floor()
+        //楼层样式
+        function floor(){
+          let elevatorSeckill = document.querySelector(".elevator_seckill a")
+          let elevatorSpec = document.querySelector(".elevator_spec a")
+          let elevatorChannels = document.querySelector(".elevator_channels a")
+          let elevatorFeeds = document.querySelector(".elevator_feeds a")
+          let header = document.querySelector("header")
+          let bg = document.querySelector(".bg")
+          let elevator = document.querySelector(".elevator")
+          window.onscroll = function(){
+            elevatorSeckill.style.color = "#666"
+            elevatorSpec.style.color = "#666"
+            elevatorChannels.style.color = "#666"
+            elevatorFeeds.style.color = "#666"
+           //窗口高度
+          //  let windowHight = document.documentElement.clientHeight
+           //滚动条移动距离
+           let  scrollBar = document.documentElement.scrollTop || document.body.scrollTop
+           //距离顶端的偏移量
+           let TopHeight = header.offsetHeight+bg.offsetHeight
+           console.log(scrollBar)
+            if(scrollBar >= TopHeight&&(scrollBar <= TopHeight+260)){
+              elevatorSeckill.style.color = "#e1251b"
+              elevatorSeckill.onmouseover = () => {elevatorSeckill.style.color = "#fff"}
+              elevatorSeckill.onmouseout = () => {elevatorSeckill.style.color = "#666"}
+              elevator.style.position = "fixed"
+              elevator.style.top = "75px"
+              
+            }else if((scrollBar >= TopHeight+260)&&scrollBar <= (TopHeight+260+260)){
+              elevatorSeckill.style.color = "#666"
+              elevatorSpec.style.color = "#e1251b"
+              
+              elevatorSpec.onmouseover = () => {elevatorSpec.style.color = "#fff"}
+              elevatorSpec.onmouseout = () => {elevatorSpec.style.color = "#666"}
+             
+            }else if(scrollBar >= (TopHeight+260+260)&&scrollBar <= (TopHeight+260+260+845)){
+              elevatorSpec.style.color = "#666"
+             
+              elevatorChannels.style.color = "#e1251b"
+           
+              elevatorChannels.onmouseover = () => {elevatorChannels.style.color = "#fff"}
+              elevatorChannels.onmouseout = () => {elevatorChannels.style.color = "#666"}
+            }
+            else if(scrollBar >= (TopHeight+260+260+845)){
+              elevatorChannels.style.color = "#666"
+              elevatorFeeds.style.color = "#e1251b"
+            
+              elevatorFeeds.onmouseover = () => {elevatorFeeds.style.color = "#fff"}
+              elevatorFeeds.onmouseout = () => {elevatorFeeds.style.color = "#666"}
+            }else{
+              elevator.style.position = "absolute"
+              elevatorSeckill.style.color = "#666"
             }
 
+
           }
+                     
+          
         }
-      
+        
       
 
 
