@@ -244,4 +244,8 @@
         timmerS.innerHTML = s
       }
 
+      // let sliderPrev = document.querySelector(".slider .sliderPrev")
+      // let sliderNext = document.querySelector(".slider .sliderNext")
+      
+
 

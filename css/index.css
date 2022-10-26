@@ -293,7 +293,7 @@
   .carousel image{
     overflow: hidden;
   }
-  .next,.prev,.next1,.prev1{
+  .next,.prev,.next1,.prev1,.sliderPrev,.sliderNext{
     text-align: center;
     color: #fff;
     top: 50%;
@@ -351,8 +351,10 @@
     position: relative;
     cursor: pointer;
   }
+
+
   .carousel1All{
-     display: none;
+     display: block;
      position: absolute;
      top: -470px;
      left: 590px;
@@ -374,7 +376,7 @@
    border-radius: 18px 0 0 18px;
   
   }
-  .prev1:hover{
+  .prev1:hover,.sliderPrev:hover,.sliderNext:hover{
     background-color: rgba(0, 0, 0, .5);
   }
   .next1:hover{
@@ -393,10 +395,10 @@
     width: 190px;
     height: 150px;
   }
-  .Minigraph {
+  .box .Minigraph {
     display: none;
   }
-  .Minigraph .chart2{
+  .box .Minigraph .chart2{
     margin: 6px 0  6px 0;
   }
   .imgActive{
@@ -643,7 +645,7 @@
   .seckill{
     height: 260px;
     margin: 30px 0 20px 0;
-    background-color: bisque;
+    
   }
   .spec{
     height: 260px;
@@ -699,6 +701,10 @@
     color: #fff;
     /* z-index: 999999; */
   }
+  .seckill .seckill_inner{
+    height: 260px;
+    background-color: #fff;
+  }
   .seckill-countdown{
     height: 260px;
     margin-bottom: 20px;
@@ -732,12 +738,17 @@
     display: inline-block;
   }
   .seckill-countdown .timmer{
+    position: relative;
     margin-left: auto;
     margin-right: auto;
     width: 150px;
     height: 38px;
     margin-top: 10px;
     display: block;
+    line-height: 25px;
+  }
+  .seckill-countdown .timmer span{
+    padding-top: 5px;
   }
   .seckill-countdown .timmer .timmer-hour{
     position: relative;
@@ -750,7 +761,20 @@
     color: #fff;
     font-size: 20px;
   }
+  .seckill-countdown .timmer .h_m,.seckill-countdown .timmer .m_m{
+    position: absolute;
+    font-size: 30px;
+    top: -5px;
+    margin-top: 3px;
+    z-index: 5;
+  }
   .seckill-countdown .timmer .h_m{
+    left: 36px;
+  }
+  .seckill-countdown .timmer .m_m{
+    right: 55px;
+  }
+  /* .seckill-countdown .timmer .h_m{
     position: absolute;
     left: 55px;
     bottom: 35px;
@@ -760,5 +784,71 @@
     position: absolute;
     left: 105px;
     bottom: 35px;
+    top: 0;
+    z-index: 2;
     font-size: 30px;
+  } */
+  .slider{
+    position: relative;
+    height: 260px;
+    width: 610px;
+    left: 190px;
+  }
+  .sliderPrev{
+    border-radius: 18px 0 0 18px;
+    right: 0px;
+  }
+  .sliderNext{
+    left: 0;
+    border-radius: 0 18px 18px 0
+  }
+  .box2 .Minigraph{
+    width: 610px;
+    height: 260px;
+    overflow: hidden;
+  }
+  .box2 .Minigraph .chart{
+    float: left;
+  }
+  .box2 .Minigraph .chart img{
+    width: 140px;
+    height: 140px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    background: #fff;
+    overflow: hidden;
+  }
+  .box2 .Minigraph .chart .chart1-tilte{
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 160px;
+    height: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 13px;
+  }
+  .box2 .Minigraph .chart .chart1-price{
+    position: relative;
+    box-sizing: border-box;
+    line-height: 24px;
+    overflow: hidden;
+    text-align: center;
+    width: 160px;
+    height: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7px;
+    text-align: center;
+    color: #e1251b;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 22px;
+
+  }
+  .box2 .Minigraph{
+    position: absolute;
+    top: 0;
   }
