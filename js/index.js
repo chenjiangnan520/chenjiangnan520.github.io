@@ -166,7 +166,7 @@
            let  scrollBar = document.documentElement.scrollTop || document.body.scrollTop
            //距离顶端的偏移量
            let TopHeight = header.offsetHeight+bg.offsetHeight
-           console.log(scrollBar)
+          //  console.log(scrollBar)
             if(scrollBar >= TopHeight&&(scrollBar <= TopHeight+260)){
               elevatorSeckill.style.color = "#e1251b"
               elevatorSeckill.onmouseover = () => {elevatorSeckill.style.color = "#fff"}
@@ -199,13 +199,49 @@
               elevator.style.position = "absolute"
               elevatorSeckill.style.color = "#666"
             }
-
-
           }
                      
           
         }
-        
-      
+
+        let timmerH = document.querySelector(".timmer-h")
+        let timmerM = document.querySelector(".timmer-m")
+        let timmerS = document.querySelector(".timmer-s")
+        let countdownS = document.querySelector(".countdown-desc strong")
+        setInterval(() =>{
+             let currentTime = new Date()
+             let endTime = new Date()
+             let timmer = currentTime.getHours()
+             let time = startTime(timmer+2)
+             countdownS.innerHTML = time + ':00'
+           
+             //开始时间
+             function startTime (time){
+               if(time%2){
+                  time--
+               }
+               return time;
+             }
+                         
+             endTime.setHours(time)
+             endTime.setMinutes(0)
+             endTime.setSeconds(0)
+             //计算时间差
+             let difference = (endTime-currentTime)/1000
+             let dTimeH = Math.trunc(difference/60/60) 
+             let dTimeM = Math.trunc(difference/60%60) 
+             let dTimeS = Math.trunc(difference%60) 
+
+             TimeHtml(dTimeH,dTimeM,dTimeS)
+
+        },1000)
+      function TimeHtml (h,m,s){
+        if(h<10) h = "0" + h
+        if(m<10) m = "0" + m
+        if(s<10) s = "0" + s
+        timmerH.innerHTML = h
+        timmerM.innerHTML = m 
+        timmerS.innerHTML = s
+      }
 
 

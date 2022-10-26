@@ -739,7 +739,7 @@
     margin-top: 10px;
     display: block;
   }
-  .seckill-countdown .timmer span{
+  .seckill-countdown .timmer .timmer-hour{
     position: relative;
     float: left;
     width: 30px;
@@ -750,7 +750,15 @@
     color: #fff;
     font-size: 20px;
   }
-  .seckill-countdown .timmer-after .h_m{
-  
-  
+  .seckill-countdown .timmer .h_m{
+    position: absolute;
+    left: 55px;
+    bottom: 35px;
+    font-size: 30px;
+  }
+  .seckill-countdown .timmer .m_m{
+    position: absolute;
+    left: 105px;
+    bottom: 35px;
+    font-size: 30px;
   }
