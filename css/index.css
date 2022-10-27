@@ -401,7 +401,7 @@
   .box .Minigraph .chart2{
     margin: 6px 0  6px 0;
   }
-  .imgActive{
+  .box .imgActive{
     display: block;
   }
   
@@ -704,6 +704,7 @@
   .seckill .seckill_inner{
     height: 260px;
     background-color: #fff;
+    position: relative;
   }
   .seckill-countdown{
     height: 260px;
@@ -791,7 +792,7 @@
   .slider{
     position: relative;
     height: 260px;
-    width: 610px;
+    width: 800px;
     left: 190px;
   }
   .sliderPrev{
@@ -802,15 +803,17 @@
     left: 0;
     border-radius: 0 18px 18px 0
   }
-  .box2 .Minigraph{
-    width: 610px;
+  .box2 .Minigraph1{
+    width: 800px;
     height: 260px;
     overflow: hidden;
+    position: absolute;
+    display: none;
   }
-  .box2 .Minigraph .chart{
+  .box2 .Minigraph1 .chart{
     float: left;
   }
-  .box2 .Minigraph .chart img{
+  .box2 .Minigraph1 .chart img{
     width: 140px;
     height: 140px;
     margin-left: auto;
@@ -819,7 +822,7 @@
     background: #fff;
     overflow: hidden;
   }
-  .box2 .Minigraph .chart .chart1-tilte{
+  .box2 .Minigraph1 .chart .chart1-tilte{
     font-weight: 400;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -830,7 +833,7 @@
     margin-right: auto;
     margin-top: 13px;
   }
-  .box2 .Minigraph .chart .chart1-price{
+  .box2 .Minigraph1 .chart .chart1-price{
     position: relative;
     box-sizing: border-box;
     line-height: 24px;
@@ -851,4 +854,74 @@
   .box2 .Minigraph{
     position: absolute;
     top: 0;
+  }
+  .box2 .Minigraph1 .chart:nth-child(1){
+    margin-left: 45px;
+  }
+  .box2 .Minigraph1 .chart{
+    margin-left: 30px;
+  }
+  .box2 .box2M{
+    display: block;
+  }
+  .seckill-brand{
+    width: 190px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: left;
+    height: 260px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .seckill-brand .brand-item{
+    position: relative;
+    color: #666;
+    text-align: center;
+  }
+  .seckill-brand .brand-item .item-img img{
+    width: 120px;
+    height: 120px;
+    margin-left: auto;
+    margin-top: auto;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  .seckill-brand .brand-item .item-info{
+    background: linear-gradient(180deg,rgba(255,255,255,.5),rgba(220,224,236,.5));
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    height: 90px;
+    margin-top: 10px;
+    box-sizing: border-box;
+  }
+  .seckill-brand .brand-item .item-info .item-promo{
+    color: #000;
+    font-weight: 700;
+  }
+  .seckill-brand .brand-item .item-info .item-action{
+    color: #e1251b;
+    border-radius: 14px;
+    width: 82px;
+    height: 24px;
+    line-height: 20px;
+    padding-left: 4px;
+    box-sizing: border-box;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 12px;
+    border: 1px solid #e1251b;
+    margin-top: 4px;
+  }
+  .seckill-brand .brand-item .item-info .item-action .iconfont{
+    margin-left: -2px;
+    font-size: 16px;
+    font-weight: 400px;
+    vertical-align: middle;
+    margin-top: -2px;
+  }
+  .seckill-brand .brand-item .item-info .item-action:hover{
+    color: #fff;
+    background-color: #e1251b;
   }

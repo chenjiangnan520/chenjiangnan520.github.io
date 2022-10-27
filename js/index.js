@@ -243,9 +243,28 @@
         timmerM.innerHTML = m 
         timmerS.innerHTML = s
       }
-
-      // let sliderPrev = document.querySelector(".slider .sliderPrev")
-      // let sliderNext = document.querySelector(".slider .sliderNext")
-      
+      let Minigraph1 = document.querySelectorAll(".Minigraph1")
+      let sliderPrev = document.querySelector(".slider .sliderPrev")
+      let sliderNext = document.querySelector(".slider .sliderNext")
+      console.log(Minigraph1)
+      let cont = 0
+      sliderPrev.onclick = function(){
+        for( let i=0; i<Minigraph1.length;i++){
+          Minigraph1[i].classList.remove ( "box2M")
+        }
+        cont++
+        if(cont>=Minigraph1.length) cont = 0
+        Minigraph1[cont].classList.add ( "box2M")
+        console.log(Minigraph1[cont].classList)
+      }
+      sliderNext.onclick = function(){
+        for( let i=0; i<Minigraph1.length;i++){
+          Minigraph1[i].classList.remove ( "box2M")
+        }
+        cont--
+        if(cont<0) cont = Minigraph1.length-1
+        Minigraph1[cont].classList.add ( "box2M")
+        console.log(Minigraph1[cont].classList)
+      }
 
 
