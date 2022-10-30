@@ -175,14 +175,14 @@
               elevator.style.top = "75px"
               
             }else if((scrollBar >= TopHeight+260)&&scrollBar <= (TopHeight+260+260)){
-              elevatorSeckill.style.color = "#666"
+              // elevatorSeckill.style.color = "#666"
               elevatorSpec.style.color = "#e1251b"
               
               elevatorSpec.onmouseover = () => {elevatorSpec.style.color = "#fff"}
               elevatorSpec.onmouseout = () => {elevatorSpec.style.color = "#666"}
              
             }else if(scrollBar >= (TopHeight+260+260)&&scrollBar <= (TopHeight+260+260+845)){
-              elevatorSpec.style.color = "#666"
+              // elevatorSpec.style.color = "#666"
              
               elevatorChannels.style.color = "#e1251b"
            
@@ -190,7 +190,7 @@
               elevatorChannels.onmouseout = () => {elevatorChannels.style.color = "#666"}
             }
             else if(scrollBar >= (TopHeight+260+260+845)){
-              elevatorChannels.style.color = "#666"
+              // elevatorChannels.style.color = "#666"
               elevatorFeeds.style.color = "#e1251b"
             
               elevatorFeeds.onmouseover = () => {elevatorFeeds.style.color = "#fff"}
@@ -200,9 +200,30 @@
               elevatorSeckill.style.color = "#666"
             }
           }
-                     
+          let seckill =  document.querySelector(".seckill")
+          let spec =  document.querySelector(".spec")
+          let channels =  document.querySelector(".channels")
+          let feeds =  document.querySelector(".feeds")
+            // 锚点跳转
+        elevatorSeckill.onclick = function(){
+            seckill.scrollIntoView({behavior:"smooth",block:"start"})
           
-        }
+        }     
+        elevatorSpec.onclick = function(){
+          spec.scrollIntoView({behavior:"smooth",block:"start"})
+      
+      }     
+       elevatorChannels.onclick = function(){
+        channels.scrollIntoView({behavior:"smooth",block:"start"})
+       
+       }     
+        elevatorFeeds.onclick = function(){
+       feeds.scrollIntoView({behavior:"smooth",block:"start"})
+      
+       }         
+          
+      }
+        
 
         let timmerH = document.querySelector(".timmer-h")
         let timmerM = document.querySelector(".timmer-m")
@@ -246,7 +267,7 @@
       let Minigraph1 = document.querySelectorAll(".Minigraph1")
       let sliderPrev = document.querySelector(".slider .sliderPrev")
       let sliderNext = document.querySelector(".slider .sliderNext")
-      console.log(Minigraph1)
+      // console.log(Minigraph1)
       let cont = 0
       sliderPrev.onclick = function(){
         for( let i=0; i<Minigraph1.length;i++){
